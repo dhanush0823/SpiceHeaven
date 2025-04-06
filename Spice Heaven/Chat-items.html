@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spice Heaven</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Margarine&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Satisfy&display=swap');
+        
+        :root{
+    --ff-primary:"roboto",sans-sans-serif;
+    --ff-secondary:"inter"; sans-serif;
+    --ff-design:"satisfy"; cursive;
+   --ff-brand:"margarine"; sans-serif;
+
+   --clr-white:#fff;
+   --clr-dark:#333;
+   --clr-grey-1:#102a42;
+   --clr-grey-2:#617d98;
+   --clr-primary:#f53b57;
+   --clr-grey-3:#d9dbdc;
+   --clr-primary-ligth:#f04660;
+   --clr-secondary:#e9b949;
+
+   --transition: all 0.3s linear;
+
+   
+}
+@keyframes appear{
+    from {
+        opacity: 0;
+        clip-path: inset(100% 100% 0 0);
+    }
+    to{
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+
+}
+@keyframes flame {
+
+0%,
+
+100% {
+
+text-shadow: 0 -5px 10px rgba(255, 69, 0,0.6), 0-5px 20px rgba(255, 69, 0, 0.4), 0-5px 30px rgba(255, 69, 0, 0.2), 0-5px 40px rgba(255, 69, 0,0.1);
+
+}
+
+25% {
+
+text-shadow: 0-5px 15px rgba(255, 69, 0, 0.8), 0 -5px 30px rgba(255, 69, 0, 0.6), 0-5px 45px rgba(255, 69, 0, 0.4), 0-5px 60px rgba(255, 69, 0, 0.2);
+
+}
+
+50% {
+
+text-shadow: 0 5px 20px rgba(255, 69, 0, 0.8), 0 -5px 40px rgba(255, 69, 0, 0.6), 0-5px 60px rgba(255, 69, 8, 0.4), 0-5px 80px rgba(255, 69, 0, 0.2);
+
+}
+
+75% {
+
+text-shadow: 0 -5px 15px rgba(255, 69, 0, 0.8), 0 -5px 30px rgba(255, 69, 0, 0.6), 0-5px 45px rgba(255, 69, 8, 8.4), 0-5px 60px rgba(255, 69, 0, 0.2);
+
+}
+}
+body{
+    background-color: var(--clr-grey-3);
+}
+
+.header img{
+    width: 150px;
+    display: inline-block;
+    margin: 0 auto;
+    padding-left: 43%;
+}
+h2{
+    font-family: var(--ff-design);
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: red;
+}
+
+a{
+    text-decoration: none;
+    color: red;
+    padding-left: 30px;
+    font-family: Arial;
+}
+        
+        .tittle-card{
+            text-align: center;
+            font-size: 20px;
+            font-weight: 400;
+            
+        }
+        .tittle-card h1{
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--clr-white);
+            margin-top: 1.25rem;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            text-shadow: 2px 5px 5px var(--clr-primary);
+            animation: flame 1s infinite;
+            
+
+        }
+    #order23 {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    padding: 0.375rem 0.75rem;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    font-weight: 400;
+    transition: var(--transition);
+    font-size: 0.875rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    margin-top: 3%;
+}
+.order123{
+    font-size: rem;
+    padding: 0.75rem 2rem;
+    border-radius: 100px;
+    background-image: linear-gradient(180deg,var(--clr-primary) 80%,var(--clr-secondary));
+}
+
+.order123{
+    outline: 0.125rem solid var(--clr-primary);
+    outline-offset: 0.25rem;
+}
+        .tittle-card h2{
+            color: transparent;
+            background-image: linear-gradient(180deg,var(--clr-primary),var(--clr-secondary));
+            background-clip: text;
+        }
+        
+
+        .items{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            padding: 30px 20px;
+            grid-column-gap: 30px;
+             }
+        .item h4{
+            margin-left: 10px;
+        }
+        
+        .item img{
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: 0.2s ease;
+            margin-left: 70px;
+            border-color: black;
+            border: 5px;
+            border-style: solid;
+            border-radius: 100px;
+            box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.2);
+        }
+        .item img:hover{
+            box-shadow: 0px 6px 3px rgba(0, 0, 0, 0.3);
+            transform: translate(-2px);
+            transition: var(--transition);
+            border-radius: 0px;
+        }
+    
+
+
+        .item img:hover{
+            transform: scale(1.04);
+        }
+        .item h4{
+            padding-left: 15px;
+            text-align: center;
+        
+        }
+
+        .item{
+            padding: 15px;
+        }
+        
+
+        
+        
+        
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+    <img src="img/logo.png" alt=""></a>
+    <h2>Chat Items</h2>
+    </div>
+    
+    <section class="items">
+        <div class="item">
+            <img src="img/samosa.jpg" alt="">
+            <h4>Samasa  <a href="">₹ 220/-</a><br> <a class="order123" id="order23">Order Now</a></h4>
+        </div>
+        <div class="item">
+            <img src="img/Cutlet.jpg" alt="">
+            <h4>Cutlet  <a href="">₹ 220/-</a><br> <a class="order123" id="order23">Order Now</a></h4>
+        </div>
+        <div class="item">
+            <img src="img/vada paw.jpg" alt="">
+            <h4>pav bhaji  <a href="">₹ 220/-</a><br> <a class="order123" id="order23">Order Now</a></h4>
+        </div>
+        <div class="item">
+            <img src="img/sanwich.jpg" alt="">
+            <h4>Sanwich  <a href="">₹ 220/-</a><br> <a class="order123" id="order23">Order Now</a></h4>
+        </div>
+        <div class="item">
+            <img src="img/pani puri.jpg" alt="">
+            <h4>pani puri  <a href="">₹ 220/-</a><br> <a class="order123" id="order23">Order Now</a></h4>
+        </div>
+        <div class="item">
+            <img src="img/kalan.webp" alt="">
+            <h4>kalan  <a href="">₹ 220/-</a><br> <a class="order123" id="order23">Order Now</a></h4>
+        </div>
+        <div class="item">
+            <img src="img/Bhel-Puri.jpg" alt="">
+            <h4>Bhel puri  <a href="">₹ 220/-</a><br> <a class="order123" id="order23">Order Now</a></h4>
+        </div>
+        <div class="item">
+            <img src="img/kachori.jpeg" alt="">
+            <h4>Kochori  <a href="">₹ 220/-</a><br> <a class="order123" id="order23">Order Now</a></h4>
+        </div>
+        <div class="item">
+            <img src="img/channa - Copy.jpg" alt="">
+            <h4>channa  <a href="">₹ 220/-</a><br> <a class="order123" id="order23">Order Now</a></h4>
+        </div>
+    <script>
+        alert("To get back click the Logo");
+
+        document.getElementById('order23').addEventListener("click",
+        function(){
+        window.location.href="pay.html"});
+     
+    </script>  
+    </section>
+</body>
+</html>
